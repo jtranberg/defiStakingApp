@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react'
 import './App.css'
 import Navbar from './Navbar'
@@ -6,8 +5,8 @@ import Web3 from 'web3'
 import Tether from '../truffle_abis/Tether.json'
 import RWD from '../truffle_abis/RWD.json'
 import DecentralBank from '../truffle_abis/DecentralBank.json'
-import { Main } from 'react-tsparticles'
 import Main1 from './Main1.js'
+// import ParticleSettings from './ParticleSettings.json'
 
 class App extends Component {
 
@@ -30,9 +29,9 @@ class App extends Component {
                 const tether = new web3.eth.Contract(Tether.abi, tetherData.address)
                 this.setState({tether})
                  let tetherBalance = await tether.methods.balanceOf(this.state.account).call()
-                 this.setState({teherBalance: tetherBalance.toString() })
+                 this.setState({tetherBalance: tetherBalance.toString()})
               }else {
-                window.alert("teher contract not deplyed - network not deployed")
+                window.alert("tether contract not deplyed - network not deployed")
               }
 
 
@@ -64,7 +63,7 @@ class App extends Component {
         if(window.ethereum){
             window.web3 = new Web3(window.ethereum)
             await window.ethereum.enable()
-        } else if(window.web) {
+        } else if(window.web3) {
             window.web3 =new Web3(window.web3.currentProvider)
             } else {
                 window.alert('No Etheruem browser, check metamask!')
@@ -82,11 +81,16 @@ class App extends Component {
            rwdBalance:'0',
            stakingBalance:'0',
            loading: true
-
-       }
+        }
     }
     // react code goes here
     render() {
+      
+      // let content
+      // this.state.loading ?  content =
+      // <p id='loader' className='text-center' style={{margin:'30px'}}>
+      //  LOADING PLEASE ...</p> : content = 
+      //  <Main1 />
         return(
            <div>
             <Navbar account={this.state.account}/>
@@ -94,7 +98,9 @@ class App extends Component {
                   <div classname="row">
                       <main role='main' className='col-lg-12 ml-auto mr-auto'style={{maxWidth: '600px', minHeight:'100vm'}}>
                          <div>
-                            <Main1/>
+                         <Main1 tetherBalance={this.state.tetherBalance}
+                                   rwdBalance={this.state.rwdBalance}
+                                   stakingBalance={this.state.stakingBalance}/>
                          </div>
                       </main>
                   </div>

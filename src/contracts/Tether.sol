@@ -11,6 +11,7 @@ contract Tether {
          address indexed _to,
          uint256 _value
     );
+
     event Approval(
         address indexed _owner,
         address indexed _spender,
@@ -39,7 +40,6 @@ contract Tether {
         allowance[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
         return true;
-
     }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {

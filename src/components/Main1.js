@@ -4,6 +4,7 @@ import tether from '../tether.png'
 
 class Main1 extends Component {
     render() {
+        
         return (
         <div id='content' className='mt-3'>
             <table className='table text-muted text-center'>
@@ -15,17 +16,17 @@ class Main1 extends Component {
                 </thead>
                 <tbody>
                     <tr style={{color:'black'}}>
-                        <td>USDT</td>
-                        <td>RWD</td>
+                        <td>{window.web3.utils.fromWei(this.props.stakingBalance, "Ether")} USDT</td>
+                        <td>{window.web3.utils.fromWei(this.props.rwdBalance, "Ether")} RWD</td>
                     </tr>
                 </tbody>
             </table>
             <div classname='card mb-2' style={{opacity:'.9'}}>
                <form classname='mb-3'>
                 <div style={{borderSpaceing:'0 1em'}}>
-                    <label className='float-left' style={{marginLeft:'25px'}}><b>Stake tokens</b></label>
+                    <label className='float-left' style={{marginLeft:'15px'}}><b>Stake tokens</b></label>
                     <span className='float-right' style={{margineRight:'8px'}}>
-                        Balance:
+                        Balance: {window.web3.utils.fromWei(this.props.tetherBalance, "Ether")}
                     </span>
                     <div className='input-group mb-4'>
                         <input type='text' placeholder='0'required />
