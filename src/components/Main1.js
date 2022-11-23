@@ -22,7 +22,15 @@ class Main1 extends Component {
                 </tbody>
             </table>
             <div classname='card mb-2' style={{opacity:'.9'}}>
-               <form classname='mb-3'>
+                <form
+                onSubmit={(event) => {
+                    let amount
+                    amount = this.input.value.toString()
+                    amount = window.web3.utils.toWei(amount, 'Ether')
+                    this.props.stakeTokens()
+                }}
+
+               classname='mb-3'>
                 <div style={{borderSpaceing:'0 1em'}}>
                     <label className='float-left' style={{marginLeft:'15px'}}><b>Stake tokens</b></label>
                     <span className='float-right' style={{margineRight:'8px'}}>
