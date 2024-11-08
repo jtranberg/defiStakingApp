@@ -1,26 +1,25 @@
-import React, {Component} from 'react'
-import bank from '../bank.png'
+import React, { Component } from 'react';
+import bank from '../bank.png';
+import '../styles/Navbar.css';
 
 class Navbar extends Component {
-    render() {
-        return (
-           
-            <nav className='navbar navbar-dark fixed-top shadow p-0' style={{backgroundColor:'#c7800e', height:'50px'}}>
-                <a href className='navbar-brand col-sm-3 col-md-2 mr-0'
-                style={{color:'white'}}> 
-                <img src={bank} width='50' height='30' className='d-inline-block align-top' alt='bank'/>
-                &nbsp; DAPP Yeild Staking &nbsp;(Decentralized Banking)
-                </a>
-            
-                <ul className='navbar-nav px-3'>
-                    <li className='text-nowrap d-none nav-item d-sm-none d-sm-block'>
-                        <small style={{color:'#680a70', fontSize:'20px'}}>ACCOUNT NUMBER: {this.props.account}
-                        </small>
-                    </li>
-                </ul>
-            </nav>
-
-       )
-    }
+  render() {
+    return (
+      <nav className='custom-navbar'>
+        <a href='/' className='navbar-brand'>
+          <img src={bank} width='50' height='30' alt='bank' className='bank-logo' />
+          &nbsp; DAPP Yield Staking &nbsp;(Decentralized Banking)
+        </a>
+        <ul className='navbar-nav'>
+          <li className='nav-item'>
+            <span className='account-text'>
+              ACCOUNT NUMBER: {this.props.account}
+            </span>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
 }
+
 export default Navbar;

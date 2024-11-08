@@ -73,7 +73,6 @@ class App extends Component {
         stakingBalance = await decentralBank.methods.stakingBalance(this.state.account).call();
       }
 
-      // Update state
       this.setState({
         tether,
         rwd,
@@ -93,29 +92,24 @@ class App extends Component {
     const { account, tetherBalance, rwdBalance, stakingBalance, loading } = this.state;
 
     return (
-      <div>
+      <div className='app-container'>
         <Navbar account={account} />
-        <div className='container-fluid mt-5'style={{ background: '#eebaf7' }}>
-          <div className="row">
-            <main
-              role='main'
-              className='col-lg-12 ml-auto mr-auto'
-              style={{ maxWidth: '600px', minHeight: '100vh' }}
-            >
-              <div>
-                {loading ? (
-                  <p id='loader' className='text-center' style={{ margin: '30px' }}>
-                    LOADING, PLEASE WAIT...
-                  </p>
-                ) : (
-                  <Main1
-                    tetherBalance={tetherBalance}
-                    rwdBalance={rwdBalance}
-                    stakingBalance={stakingBalance}
-                  />
-                )}
+        <div className='content-wrapper'>
+          <div className='main-content'>
+            {loading ? (
+              <div className='loader-container'>
+                <div className='progress-bar'>
+                  <div className='progress'></div>
+                </div>
+                <p className='loading-text'>LOADING, PLEASE WAIT...</p>
               </div>
-            </main>
+            ) : (
+              <Main1
+                tetherBalance={tetherBalance}
+                rwdBalance={rwdBalance}
+                stakingBalance={stakingBalance}
+              />
+            )}
           </div>
         </div>
       </div>

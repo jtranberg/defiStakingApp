@@ -1,0 +1,68 @@
+/* App Container Styling */
+.app-container {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0c0e1a, #022f66);
+    color: #c5c6c7;
+    min-height: 100vh;
+  }
+  
+  /* Content Wrapper */
+  .content-wrapper {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    background: rgba(24, 28, 39, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Loader Container */
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-top: 20px;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .progress {
+    width: 0%;
+    height: 20px;
+    background: linear-gradient(135deg, #a0f6f0, #0f7f79);
+    animation: progress-animation 3s infinite;
+  }
+  
+  /* Progress Bar Animation */
+  @keyframes progress-animation {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+  
+  /* Loading Text */
+  .loading-text {
+    font-size: 20px;
+    color: #66fcf1;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+  }
+  

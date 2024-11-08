@@ -1,0 +1,53 @@
+/* Navbar Styling */
+.custom-navbar {
+  background: linear-gradient(135deg, #1f2833, #0b0c10);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  color: #66fcf1;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #45a29e;
+}
+
+/* Bank logo */
+.bank-logo {
+  margin-right: 10px;
+}
+
+/* Navbar navigation */
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Account number text */
+.account-text {
+  color: #f7e7d4;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+}
+
+.account-text:hover {
+  color: #66fcf1;
+}
