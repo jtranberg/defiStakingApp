@@ -6,7 +6,7 @@ class Main1 extends Component {
     render() {
         
         return (
-        <div id='content' className='mt-3'>
+        <div id='content' className='mt-3' style={{ padding:'10px',background: '#f7deba', color:'red' , borderRadius:'5px',border: "3px solid #333"}}>
             <table className='table text-muted text-center'>
                 <thead>
                 <tr style={{color:'black'}}>
@@ -14,7 +14,7 @@ class Main1 extends Component {
                     <th scope='col'>Reward Balance</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody style={{ background: '#c7800e' }}>
                     <tr style={{color:'black'}}>
                         <td>{window.web3.utils.fromWei(this.props.stakingBalance, "Ether")} USDT</td>
                         <td>{window.web3.utils.fromWei(this.props.rwdBalance, "Ether")} RWD</td>
@@ -45,11 +45,11 @@ class Main1 extends Component {
                             </div>
                         </div>
                     </div>
-                     <button type='submit' className='btn btn-primary btn-lg btn-block'>DEPOSIT</button>
+                     <button  style={{ background: '#c7800e' }}type='submit' className='btn btn-primary btn-lg btn-block'>DEPOSIT</button>
                     </div>
                 </form>
                             &nbsp;
-                 <button type='submit' className='btn btn-primary btn-lg btn-block'>WITHDRAW</button>
+                 <button style={{ background: '#c7800e' }}type='submit' className='btn btn-primary btn-lg btn-block'>WITHDRAW</button>
                    <div className='card-body text-center style+{{color:blue}}'>
                      AIRDROP
                    </div>

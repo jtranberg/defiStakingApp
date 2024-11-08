@@ -95,7 +95,7 @@ class App extends Component {
     return (
       <div>
         <Navbar account={account} />
-        <div className='container-fluid mt-5'>
+        <div className='container-fluid mt-5'style={{ background: '#eebaf7' }}>
           <div className="row">
             <main
               role='main'
