@@ -45,12 +45,10 @@ class Main1 extends Component {
             </div>
           </form>
 
+          
           <div className='buttons-row'>
             <button type='button' className='btn withdraw-btn'>
               WITHDRAW
-            </button>
-            <button type='button' className='btn disconnect-btn'>
-              DISCONNECT
             </button>
           </div>
 

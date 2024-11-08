@@ -108,7 +108,7 @@
 
 .buttons-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 15px;
 }
@@ -121,17 +121,6 @@
 
 .withdraw-btn:hover {
   background: linear-gradient(135deg, #ff4e50, #f9d423);
-}
-
-.disconnect-btn {
-  background: linear-gradient(135deg, #ff4e50, #f9d423);
-  flex: 1;
-  margin-left: 10px;
-}
-
-.disconnect-btn:hover {
-  background: linear-gradient(135deg, #f9d423, #ff4e50);
-  box-shadow: 0 4px 10px rgba(255, 78, 80, 0.5);
 }
 
 /* Airdrop Text */
