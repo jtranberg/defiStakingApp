@@ -23,9 +23,27 @@ class App extends Component {
   }
 
   async componentDidMount() {
+    // Show an alert describing the app in detail with a note about loading time and deploying smart contracts
+    window.alert(
+      "⚠️ Please Note: This app takes a moment to load. ⚠️\n\n" +
+      "🔗 Welcome to the Decentralized Bank Staking App! 🔗\n\n" +
+      "📌 This application is a decentralized finance (DeFi) platform built on the Ethereum blockchain. It allows you to:\n\n" +
+      "💰 Stake your Tether (USDT) tokens securely.\n" +
+      "🎁 Earn RWD (Reward) tokens as interest for staking.\n" +
+      "🔄 View your current balances and rewards in real-time.\n\n" +
+      "🛠️ To get started:\n" +
+      "1️⃣ Please connect your MetaMask wallet to the Ethereum network.\n" +
+      "2️⃣ Ensure you have Tether (USDT) tokens in your wallet.\n" +
+      "3️⃣ **IMPORTANT**: Deploy the Tether, RWD, and DecentralBank smart contracts to the blockchain first.\n" +
+      "   Without deploying these contracts, staking will not be possible.\n" +
+      "4️⃣ Once deployed, start staking to earn rewards!\n\n" +
+      "🚀 Let's dive into decentralized finance and start earning rewards today!"
+    );
+  
     await this.loadWeb3();
     await this.loadBlockchainData();
   }
+  
 
   async loadWeb3() {
     if (window.ethereum) {
