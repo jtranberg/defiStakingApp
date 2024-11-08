@@ -23,7 +23,7 @@ class Main1 extends Component {
             </table>
             <div classname='card mb-2' style={{opacity:'.9'}}>
                 <form
-                onSubmit={(event) => {
+                onSubmit={(_event) => {
                     let amount
                     amount = this.input.value.toString()
                     amount = window.web3.utils.toWei(amount, 'Ether')
