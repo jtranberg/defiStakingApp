@@ -23,12 +23,12 @@ class Main1 extends Component {
             </table>
             <div classname='card mb-2' style={{opacity:'.9'}}>
                 <form
-                onSubmit={(_event) => {
-                    let amount
-                    amount = this.input.value.toString()
-                    amount = window.web3.utils.toWei(amount, 'Ether')
-                    this.props.stakeTokens()
-                }}
+                // onSubmit={(_event) => {
+                //     let amount
+                //     amount = this.input.value.toString()
+                //     amount = window.web3.utils.toWei(amount, 'Ether')
+                //     this.props.stakeTokens()
+                // }}
 
                classname='mb-3'>
                 <div style={{borderSpaceing:'0 1em'}}>
