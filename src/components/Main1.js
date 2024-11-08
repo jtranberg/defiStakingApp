@@ -37,7 +37,7 @@ class Main1 extends Component {
                         Balance: {window.web3.utils.fromWei(this.props.tetherBalance, "Ether")}
                     </span>
                     <div className='input-group mb-4'>
-                        <input type='text' placeholder='0'required />
+                        <input style={{paddingLeft:'5px'}}type='text' placeholder='0'required />
                         <div className='input-group-open'>
                             <div className='input-group-text'>
                                <img src={tether} alt='tehter' height='32'  />
