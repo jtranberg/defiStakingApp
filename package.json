@@ -15,7 +15,6 @@
     "babel-preset-stage-3": "6.24.1",
     "babel-register": "6.26.0",
     "bootstrap": "4.3.1",
-    "caniuse-lite": "^1.0.30001418",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "chai-bignumber": "3.0.0",
@@ -33,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-  "build": "react-scripts --openssl-legacy-provider build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
