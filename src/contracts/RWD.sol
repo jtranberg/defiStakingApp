@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >= 0.5.0;
 
 contract RWD {
@@ -20,7 +21,7 @@ contract RWD {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    constructor() public {
+    constructor() {
         balanceOf[msg.sender] = totalSupply;
     }
 
@@ -47,7 +48,7 @@ contract RWD {
         require(_value <= allowance[_from][msg.sender]);
         balanceOf[_to] += _value;  //add balance of transferFrom
         balanceOf[_from] -= _value; //subtract balance for transferFrom
-        allowance[msg.sender][_from] -= _value;
+        allowance[_from][msg.sender] -= _value;
              emit Transfer(_from, _to, _value);
         return true;
     }
