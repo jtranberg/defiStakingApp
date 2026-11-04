@@ -8,7 +8,7 @@ class Navbar extends Component {
       <nav className='custom-navbar'>
         <a href='/' className='navbar-brand'>
           <img src={bank} width='50' height='30' alt='bank' className='bank-logo' />
-          &nbsp; DAPP Yield Staking &nbsp;(Decentralized Banking)
+          &nbsp; Jay's Intergalactic Yield Machine
         </a>
         <ul className='navbar-nav'>
           <li className='nav-item'>
